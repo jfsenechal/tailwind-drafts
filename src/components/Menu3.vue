@@ -6,7 +6,7 @@
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span class="sr-only">Workflow</span>
-              <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="" />
+              <img class="h-12 w-auto sm:h-14" src="../assets/logo-ecole.png" alt="" />
             </a>
           </div>
           <div class="-mr-2 -my-2 md:hidden">
@@ -26,7 +26,7 @@
                 <PopoverPanel class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                   <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                      <a v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                      <a v-for="item in navi" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                         <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
                           <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                         </div>
@@ -44,10 +44,9 @@
                 </PopoverPanel>
               </transition>
             </Popover>
-
-            <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
-            <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Partners </a>
-            <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Company </a>
+            <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-base font-medium text-gray-500 hover:text-gray-900">
+              {{item.name}}
+            </a>
           </PopoverGroup>
           <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
@@ -72,7 +71,7 @@
                 </div>
                 <div class="mt-6">
                   <nav class="grid grid-cols-1 gap-7">
-                    <a v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                    <a v-for="item in navi" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
                         <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                       </div>
@@ -106,7 +105,6 @@
 </template>
 
 <script setup>
-import { defineComponent, h } from 'vue'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import {
   AnnotationIcon,
@@ -126,27 +124,6 @@ import {
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 
-defineProps(["navigation"]);
+defineProps(["navi","navigation"]);
 
-const solutions = [
-  {
-    name: 'Inbox',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: InboxIcon,
-  },
-  {
-    name: 'Messaging',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: AnnotationIcon,
-  },
-  { name: 'Live Chat', description: "Your customers' data will be safe and secure.", href: '#', icon: ChatAlt2Icon },
-  {
-    name: 'Knowledge Base',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: QuestionMarkCircleIcon,
-  },
-]
 </script>

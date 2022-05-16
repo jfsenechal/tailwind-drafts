@@ -37,7 +37,7 @@
                 class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                    <a v-for="item in resources" :key="item.name" :href="item.href"
+                    <a v-for="item in navi" :key="item.name" :href="item.href"
                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                       <div class="ml-4">
@@ -49,22 +49,6 @@
                         </p>
                       </div>
                     </a>
-                  </div>
-                  <div class="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
-                    <div>
-                      <h3 class="text-sm tracking-wide font-medium text-gray-500 uppercase">Recent Posts</h3>
-                      <ul role="list" class="mt-4 space-y-4">
-                        <li v-for="post in recentPosts" :key="post.id" class="text-base truncate">
-                          <a :href="post.href" class="font-medium text-gray-900 hover:text-gray-700">
-                            {{ post.name }}
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="mt-5 text-sm">
-                      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> View all posts <span
-                        aria-hidden="true">&rarr;</span></a>
-                    </div>
                   </div>
                 </div>
               </PopoverPanel>
@@ -101,7 +85,7 @@
             </div>
             <div class="mt-6">
               <nav class="grid gap-y-8">
-                <a v-for="item in resources" :key="item.name" :href="item.href"
+                <a v-for="item in navi" :key="item.name" :href="item.href"
                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                   <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                   <span class="ml-3 text-base font-medium text-gray-900">
@@ -152,37 +136,5 @@ import {
   XIcon
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
-
-defineProps(["navigation"]);
-const resources = [
-  {
-    name: "Présentation globale",
-    description: "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon
-  },
-  {
-    name: "Projet éducatif",
-    description: "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
-    icon: BookmarkAltIcon
-  },
-  {
-    name: "Projet pédagogique",
-    description: "See what meet-ups and other events we might be planning near you.",
-    href: "#",
-    icon: CalendarIcon
-  },
-  {
-    name: "Règlement d'ordre intérieur",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon
-  }
-];
-const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
-  { id: 2, name: "How to use search engine optimization to drive traffic to your site", href: "#" },
-  { id: 3, name: "Improve your customer experience", href: "#" }
-];
+defineProps(["navi","navigation"]);
 </script>

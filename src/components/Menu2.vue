@@ -13,11 +13,9 @@
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
             <a v-for="item in navigation" :key="item.name" :href="item.href"
-               href="#"
                class="border-transparent text-gray-500 hover:border-orange hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
               {{ item.name }}
             </a>
-            <MenuSingle/>
           </div>
         </div>
       </div>
@@ -26,9 +24,7 @@
 </template>
 
 <script setup>
-import MenuSingle from "./MenuSingle.vue";
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
-
-defineProps(["navigation"]);
+defineProps(["navi","navigation"]);
 </script>
