@@ -53,8 +53,5 @@ const callback = (isOpen) => openSearch.value = isOpen;
     <MenuFly :navigation="navigation" :navi="navi2" />
     <hr>
     <TitlePortal @search-event="callback" :openSearch="openSearch" />
-    <Palette @search-event="callback" :openSearch="openSearch" />
-    <News />
-    <Footer />
   </div>
 </template>
