@@ -10,9 +10,10 @@
           <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
             <div>
               <label for="email-address" class="sr-only">Rechercher</label>
-              <input id="email-address" name="email-address" type="email" autocomplete="email" required=""
+              <input id="email-address" name="email-address" type="search" autocomplete="off" required="" @click="emit('search-event', true)"
                      class="appearance-none w-full px-4 py-2 border border-gray-300 text-base rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 lg:max-w-xs"
-                     placeholder="Rechercher" />
+                     placeholder="Rechercher"
+              />
             </div>
             <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
               <button type="button"
@@ -28,4 +29,7 @@
 </template>
 
 <script setup>
+defineProps(["openSearch"]);
+const emit = defineEmits(['search-event'])
+
 </script>
