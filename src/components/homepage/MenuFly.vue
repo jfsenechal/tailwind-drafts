@@ -6,7 +6,7 @@
         <div class="flex justify-start self-center">
           <a href="#">
             <span class="sr-only">Workflow</span>
-            <img class="h-12 w-auto sm:h-10" src="../../assets/logo-ecole.png"
+            <img class="h-12 w-auto" src="../../assets/logo-ecole.png"
                  alt="" />
           </a>
         </div>
@@ -23,7 +23,7 @@
             {{ item.name }}
           </a>
 
-          <Popover class="relative" v-slot="{ open }">
+          <Popover class="relative border-transparent hover:border-orange border-b-2 " v-slot="{ open }">
             <PopoverButton
               :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500']">
               <span>More</span>

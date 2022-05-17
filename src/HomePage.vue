@@ -1,15 +1,11 @@
 <script setup>
 import { computed, ref } from "vue";
-import MenuTop from "./components/homepage/MenuTop.vue";
 import Menu2 from "./components/homepage/Menu2.vue";
-import Menu3 from "./components/homepage/Menu3.vue";
 import TitlePortal from "./components/homepage/TitlePortal.vue";
 import News from "./components/homepage/News.vue";
-import MenuSingle from "./components/homepage/MenuSingle.vue";
 import MenuFly from "./components/homepage/MenuFly.vue";
 import { BookmarkAltIcon, CalendarIcon, ShieldCheckIcon, SupportIcon } from "@heroicons/vue/outline";
 import Palette from "./components/homepage/Palette.vue";
-import Border from "./components/homepage/Border.vue";
 import Footer from "./components/homepage/Footer.vue";
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
@@ -60,9 +56,8 @@ const callback = (isOpen) => openSearch.value = isOpen;
          background-image: radial-gradient(at 57% 51%, rgb(254, 215, 170) 0, transparent 40%), radial-gradient(at 47% 27%, rgb(103, 232, 249) 0, transparent 45%), radial-gradient(at 30% 86%, rgb(120, 113, 108) 0, transparent 46%), radial-gradient(at 27% 47%, rgb(82, 82, 82) 0, transparent 3%), radial-gradient(at 10% 46%, rgb(103, 232, 249) 0, transparent 15%), radial-gradient(at 29% 60%, rgb(212, 212, 216) 0, transparent 96%);
        ">-->
    <div class="bg-gradient-to-br from-rose-100 via-violet-100 to-emerald-300">
-    <Menu3 :navigation="navigation" :navi="navi2" v-if="awesome" />
-    <MenuFly :navigation="navigation" :navi="navi2" v-if="awesome" />
-    <Menu2 :navigation="navigation" :navi="navi2" />
+    <MenuFly :navigation="navigation" :navi="navi2" />
+    <Menu2 :navigation="navigation" :navi="navi2" v-if="awesome" />
     <hr>
     <TitlePortal @search-event="callback" :openSearch="openSearch" />
     <Palette @search-event="callback" :openSearch="openSearch" />
