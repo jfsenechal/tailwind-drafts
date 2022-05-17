@@ -1,9 +1,6 @@
 <template>
-  <div class="relative bg-gray-50jfs pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
-    <div class="absolute inset-0">
-      <div class="bg-whitejfs h-1/3 sm:h-2/3" />
-    </div>
-    <div class="relative max-w-7xl mx-auto">
+  <div class="pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
+    <div class="max-w-7xl mx-auto">
       <div class="text-left pb-5 border-b border-orange">
         <h2 class="text-2xl tracking-tight font-extrabold text-gray-600 sm:text-4xl">Actualités</h2>
       </div>

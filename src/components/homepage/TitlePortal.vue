@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-whitejfs pt-4 px-4 sm:px-6 lg:pt-4 lg:px-8">
-    <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
+  <div class="pt-4 px-4 sm:px-6 lg:pt-4 lg:px-8">
+    <div class="max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
       <div>
         <h2 class="text-3xl tracking-tight font-extrabold text-pink-400 sm:text-4xl">
           Portail des écoles communales
