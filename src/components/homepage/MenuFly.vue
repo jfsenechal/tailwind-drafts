@@ -1,11 +1,11 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Popover class="relative bg-white">
+  <Popover class="relative bg-white shadow-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-stretch border-b-2 border-gray-100 my-6 md:justify-start md:space-x-10">
         <div class="flex justify-start self-center">
           <a href="#">
-            <span class="sr-only">Workflow</span>
+            <span class="sr-only">Ecoles</span>
             <img class="h-12 w-auto" src="../../assets/logo-ecole.png"
                  alt="" />
           </a>
@@ -26,7 +26,7 @@
           <Popover class="relative border-transparent hover:border-orange border-b-2 " v-slot="{ open }">
             <PopoverButton
               :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500']">
-              <span>More</span>
+              <span>Informations</span>
               <ChevronDownIcon
                 :class="[open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500']"
                 aria-hidden="true" />

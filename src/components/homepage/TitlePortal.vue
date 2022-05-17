@@ -2,11 +2,11 @@
   <div class="bg-whitejfs pt-4 px-4 sm:px-6 lg:pt-4 lg:px-8">
     <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
       <div>
-        <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+        <h2 class="text-3xl tracking-tight font-extrabold text-pink-400 sm:text-4xl">
           Portail des écoles communales
         </h2>
         <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
-          <p class="text-xl text-gray-500">Implémentations des écoles de la commune de Marche-en-Famenne.</p>
+          <p class="text-xl text-gray-500">Sur la commune de Marche-en-Famenne.</p>
           <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
             <div>
               <label for="email-address" class="sr-only">Rechercher</label>
