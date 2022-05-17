@@ -2,11 +2,11 @@
 <template>
   <Popover class="relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-        <div class="flex justify-start">
+      <div class="flex justify-between items-stretch border-b-2 border-gray-100 my-6 md:justify-start md:space-x-10">
+        <div class="flex justify-start self-center">
           <a href="#">
             <span class="sr-only">Workflow</span>
-            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            <img class="h-12 w-auto sm:h-10" src="../../assets/logo-ecole.png"
                  alt="" />
           </a>
         </div>
