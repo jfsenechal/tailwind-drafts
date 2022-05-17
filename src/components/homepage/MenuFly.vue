@@ -19,7 +19,9 @@
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-10">
           <a v-for="item in navigation" :key="item.name" :href="item.href"
-             class="text-base font-medium text-gray-500 hover:text-gray-900">{{ item.name }}</a>
+             class="border-transparent hover:border-orange border-b-2 text-base font-medium text-gray-500 hover:text-gray-900">
+            {{ item.name }}
+          </a>
 
           <Popover class="relative" v-slot="{ open }">
             <PopoverButton
