@@ -1,8 +1,8 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="relative bg-gray-50 pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
+  <div class="relative bg-gray-50jfs pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
     <div class="absolute inset-0">
-      <div class="bg-white h-1/3 sm:h-2/3" />
+      <div class="bg-whitejfs h-1/3 sm:h-2/3" />
     </div>
     <div class="relative max-w-7xl mx-auto">
       <div class="text-center">
@@ -10,7 +10,7 @@
         <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
       </div>
       <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-        <div v-for="post in posts" :key="post.title" class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div v-for="post in posts" :key="post.title" class="flex flex-col rounded-lg shadow-lg overflow-hidden transition ease-in-out delay-150 hover:brightness-50 hover:scale-110">
           <div class="flex-shrink-0">
             <img class="h-48 w-full object-cover" :src="post.imageUrl" alt="" />
           </div>
