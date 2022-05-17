@@ -9,7 +9,7 @@ import Footer from "./components/homepage/Footer.vue";
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 
-const navigation = [
+const implantations = [
   { name: "Aye", href: "#" },
   { name: "Hargimont", href: "#" },
   { name: "Humain", href: "#" },
@@ -17,7 +17,7 @@ const navigation = [
   { name: "On", href: "#" },
   { name: "Waha", href: "#" }
 ];
-const navi2 = [
+const informations = [
   {
     name: "Présentation globale",
     description: "Get all of your questions answered in our forums or contact support.",
@@ -50,7 +50,7 @@ const callback = (isOpen) => openSearch.value = isOpen;
 
 <template>
   <div class="bg-gradient-to-br from-rose-100 via-violet-100 to-emerald-300">
-    <MenuFly :navigation="navigation" :navi="navi2" />
+    <MenuFly :implantations="implantations" :informations="informations" />
     <hr>
     <TitlePortal @search-event="callback" :openSearch="openSearch" />
     <Palette @search-event="callback" :openSearch="openSearch" />
