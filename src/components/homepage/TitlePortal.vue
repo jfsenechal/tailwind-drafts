@@ -6,7 +6,7 @@
           Portail des écoles communales
         </h2>
         <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
-          <p class="text-xl text-gray-500">Get weekly articles in your inbox on how to grow your business.</p>
+          <p class="text-xl text-gray-500">Implémentations des écoles de la commune de Marche-en-Famenne.</p>
           <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
             <div>
               <label for="email-address" class="sr-only">Rechercher</label>

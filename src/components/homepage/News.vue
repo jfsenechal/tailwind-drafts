@@ -10,7 +10,7 @@
         <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
       </div>
       <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-        <div v-for="post in posts" :key="post.title" class="flex flex-col rounded-lg shadow-lg overflow-hidden transition ease-in-out delay-150 hover:brightness-50 hover:scale-110">
+        <div v-for="post in posts" :key="post.title" class="flex flex-col rounded-lg shadow-lg overflow-hidden transition ease-in-out delay-100 hover:brightness-50 hover:scale-100">
           <div class="flex-shrink-0">
             <img class="h-48 w-full object-cover" :src="post.imageUrl" alt="" />
           </div>
