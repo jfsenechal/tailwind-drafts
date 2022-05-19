@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from "vue";
-import TitlePortal from "./components/homepage/TitlePortal.vue";
-import News from "./components/homepage/News.vue";
+import TitleEcole from "./components/homepageecole/TitleEcole.vue";
+import News from "./components/homepageecole/News.vue";
 import MenuFly from "./components/homepage/MenuFly.vue";
 import { BookmarkAltIcon, CalendarIcon, ShieldCheckIcon, SupportIcon } from "@heroicons/vue/outline";
-import Palette from "./components/homepage/Palette.vue";
 import Footer from "./components/homepage/Footer.vue";
+import Agenda from "./components/homepageecole/Agenda.vue";
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 
@@ -52,9 +52,26 @@ const callback = (isOpen) => openSearch.value = isOpen;
   <div class="bg-gradient-to-br from-rose-100 via-violet-100 to-emerald-300">
     <MenuFly :implantations="implantations" :informations="informations" />
     <hr>
-    <TitlePortal @search-event="callback" :openSearch="openSearch" />
-    <Palette @search-event="callback" :openSearch="openSearch" />
-    <News />
+    <TitleEcole @search-event="callback" :openSearch="openSearch" />
+
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-2 gap-3 h-full border-2 border-gray-200 rounded-lg">
+        <div class="px-4 py-5 sm:p-6">
+          <News />
+        </div>
+        <div class="px-4 py-5 sm:p-6">
+          <Agenda />
+        </div>
+      </div>
+    </div>
+
+    <!--
+     <div class="pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
+       <div class="max-w-7xl mx-auto">
+
+       </div>
+     </div>-->
     <Footer />
   </div>
 </template>
