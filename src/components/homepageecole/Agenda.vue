@@ -11,7 +11,7 @@
           class="bg-white shadow-lg shadow-blue-500/50 overflow-hidden sm:rounded-md group border-transparent border-2 hover:border-orange mb-4">
         <a :href="event.href">
           <div class="flex flex-row gap-2 items-start">
-            <div class="flex flex-col hover:bg-pink-400 hover:text-white px-10 text-center text-base text-gray-700">
+            <div class="flex flex-col hover:bg-pink-400 hover:text-white px-10 text-center text-base text-gray-700 border-dotted border-r-2">
               <span class="text-2xl font-extrabold">{{ event.day }}</span>
               <span class="text-1xl">{{ event.month }}</span>
               <span class="text-1xl">{{ event.year }}</span>
