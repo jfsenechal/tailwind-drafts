@@ -1,7 +1,9 @@
 <template>
   <ul role="list" class="space-y-3">
-    <li v-for="item in items" :key="item.id" class="bg-white shadow overflow-hidden px-4 py-4 sm:px-6 sm:rounded-md">
-      {{ item.title }}
+    <li v-for="item in items" :key="item.id" class="bg-white shadow overflow-hidden px-4 py-4 sm:px-6 sm:rounded-md flex flex-col justify-center items-center ">
+      <div class="text-lg border-b-2 border-b-pink-200 divide-y divide-gray-200 w-full mb-3">
+        {{ item.title }}
+      </div>
       <div class="aspect-w-5 aspect-h-2 rounded-lg overflow-hidden lg:h-40 lg:w-40">
         <img :src="'/src/assets/' + item.img " alt="Double stitched black canvas hook loop."
              class="object-center object-cover">

@@ -1,12 +1,13 @@
 <script setup>
-import ImgText from "./components/drafts/ImgText.vue";
 import Breadcrumb from "./components/article/Breadcrumb.vue";
 import Title from "./components/article/Title.vue";
 import Widgets from "./components/article/Widgets.vue";
+import Footer from "./components/homepage/Footer.vue";
 </script>
 
 <template>
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
     <div class="bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <Breadcrumb />
@@ -16,24 +17,28 @@ import Widgets from "./components/article/Widgets.vue";
         <Title />
       </div>
     </div>
-    <hr>
-    <div class="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200">
-      <div class="px-4 py-5 sm:px-6">
-        Job Postings
+
+    <div class="grid grid-cols-10 gap-3 h-full  shadow rounded-lg divide-y divide-gray-200">
+      <div class="col-span-7 border-2 border-gray-200 rounded-lg">
+        <div class="px-4 py-5 sm:p-6">
+          Cet après-midi, nous avons tourné un film pour le carnaval de la Grosse Biesse.
+          <br />Après, nous avons dansé la danse
+          de la Grosse Biesse et pour finir, nous avons fait une bataille de confettis.<br /><br /> Vu tous
+          les sourires sur les
+          visages, on peut se dire que les enfants se sont bien amusés.<br /><br />
+          Vous pourrez découvrir cette vidéo le samedi 13 février en regardant la chaîne YouTube de la
+          Grosse Biesse.
+          <br /><br />
+          De plus, il y aura 3 spectacles différents.<br />
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
+          sunt amet fugiat
+          veniam occaecat fugiat aliqua.<br />
+        </div>
       </div>
-      <div class="px-4 py-5 sm:p-6">
-        Cet après-midi, nous avons tourné un film pour le carnaval de la Grosse Biesse.
-        <br/>Après, nous avons dansé la danse
-        de la Grosse Biesse et pour finir, nous avons fait une bataille de confettis.<br/><br/> Vu tous les sourires sur les
-        visages, on peut se dire que les enfants se sont bien amusés.<br/><br/>
-        Vous pourrez découvrir cette vidéo le samedi 13 février en regardant la chaîne YouTube de la Grosse Biesse.
-<br/><br/>
-        De plus, il y aura 3 spectacles différents.<br/>
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-        veniam occaecat fugiat aliqua.<br/>
+      <div class="col-span-3 border-2 border-gray-200 border-dashed rounded-lg">
+        <Widgets />
       </div>
     </div>
-    <Widgets/>
-    <ImgText/>
+<Footer/>
   </div>
 </template>
