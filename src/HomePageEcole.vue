@@ -53,10 +53,8 @@ const callback = (isOpen) => openSearch.value = isOpen;
     <MenuFly :implantations="implantations" :informations="informations" />
     <hr>
     <TitleEcole @search-event="callback" :openSearch="openSearch" />
-
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-      <div class="grid grid-cols-2 gap-3 h-full border-2 border-gray-200 rounded-lg">
+      <div class="grid grid-cols-2 gap-1 h-full border-2 border-gray-200 rounded-lg">
         <div class="px-4 py-5 sm:p-6">
           <News />
         </div>
@@ -65,7 +63,6 @@ const callback = (isOpen) => openSearch.value = isOpen;
         </div>
       </div>
     </div>
-
     <!--
      <div class="pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
        <div class="max-w-7xl mx-auto">
