@@ -30,6 +30,5 @@ import { HomeIcon } from "@heroicons/vue/solid";
 const pages = [
   { name: "Humain", href: "#", current: false },
   { name: "Actualités", href: "#", current: false },
-  { name: "Project Nero", href: "#", current: true }
 ];
 </script>
