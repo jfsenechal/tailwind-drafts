@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
+  <div class="pt-4 pb-20 lg:pt-4 lg:pb-28">
     <div class="text-left pb-5 border-b border-orange flex flex-row gap-2 items-center text-gray-600">
       <CalendarIcon class="h-12 w-12 flex-grow-0" />
       <h2 class="text-2xl tracking-tight font-extrabold sm:text-3xl">
@@ -8,7 +8,7 @@
     </div>
     <ul class="">
       <li v-for="event in events" :key="event.id"
-          class="shadow-lg shadow-blue-500/50 overflow-hidden sm:rounded-md group border-transparent border-2 hover:border-orange mb-4">
+          class="bg-white shadow-lg shadow-blue-500/50 overflow-hidden sm:rounded-md group border-transparent border-2 hover:border-orange mb-4">
         <a :href="event.href">
           <div class="flex flex-row gap-2 items-start">
             <div class="flex flex-col hover:bg-pink-400 hover:text-white px-10 text-center text-base text-gray-700">

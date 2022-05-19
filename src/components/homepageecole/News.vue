@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
+  <div class="pt-4 pb-20 lg:pt-4 lg:pb-28">
       <div class="text-left pb-5 border-b border-orange flex flex-row gap-2 items-center text-gray-600">
         <NewspaperIcon class="h-12 w-12 flex-grow-0" />
         <h2 class="text-2xl tracking-tight font-extrabold sm:text-3xl">Actualités</h2>

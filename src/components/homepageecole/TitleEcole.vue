@@ -5,12 +5,15 @@
         <h2 class="text-3xl tracking-tight font-extrabold text-pink-400 sm:text-4xl">
           Ecole communale de Humain
         </h2>
-        <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
-          <p class="text-xl text-gray-500">Il y fait bon vivre.</p>
+        <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-2 lg:items-center">
+          <p class="text-xl text-gray-500">Une école où l'élève est au centre de ses apprentissages, <br>
+            dans laquelle, on travaille l' autonomie, la différenciation et l'entraide.
+          </p>
           <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
             <div>
               <label for="email-address" class="sr-only">Rechercher</label>
-              <input id="email-address" name="email-address" type="search" autocomplete="off" required="" @click="emit('search-event', true)"
+              <input id="email-address" name="email-address" type="search" autocomplete="off" required=""
+                     @click="emit('search-event', true)"
                      class="appearance-none w-full px-4 py-2 border border-gray-300 text-base rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 lg:max-w-xs"
                      placeholder="Rechercher"
               />
@@ -30,6 +33,6 @@
 
 <script setup>
 defineProps(["openSearch"]);
-const emit = defineEmits(['search-event'])
+const emit = defineEmits(["search-event"]);
 
 </script>
