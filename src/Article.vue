@@ -57,8 +57,8 @@ const informations = [
       </div>
     </div>
 
-    <div class="grid grid-cols-10 gap-3 h-full">
-      <div class="col-span-7 border-2 border-gray-200 rounded-lg">
+    <div class="grid columns-1 lg:grid-cols-10 lg:gap-3 h-full">
+      <div class="lg:col-span-7 border-2 border-gray-200 rounded-lg">
         <div class="px-4 py-5 sm:p-6">
           <article class="prose">
             Cet après-midi, nous avons tourné un film pour le carnaval de la Grosse Biesse.
@@ -77,7 +77,7 @@ const informations = [
           <Gallery />
         </div>
       </div>
-      <div class="col-span-3">
+      <div class="lg:col-span-3">
         <Widgets />
       </div>
     </div>

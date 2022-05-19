@@ -3,13 +3,13 @@
   <ul role="list" class="space-y-3">
     <li v-for="item in items" :key="item.id"
       class="bg-white shadow-lg shadow-blue-500/50 overflow-hidden px-4 py-4 sm:px-6 sm:rounded-md flex flex-col justify-center items-center">
-      <div class="text-lg border-b-2 border-b-pink-200 w-full mb-3">
-        <a :href="item.url" class="hover:text-red-200">{{ item.title }}</a>
+      <div class="text-lg border-b-2 border-b-pink-200 lg:w-full mb-3">
+        <a :href="item.url" class="hover:text-red-400">{{ item.title }}</a>
       </div>
-      <div class="aspect-w-5 aspect-h-2 rounded-lg overflow-hidden lg:h-max lg:w-full">
+      <div class="aspec2t-w-5 aspec2t-h-2 rounded-lg overflow-hidden lg:h-max lg:w-full">
         <a :href="item.url">
           <img :src="'/src/assets/' + item.img" alt="Double stitched black canvas hook loop."
-            class="object-center object-cover hover:opacity-75">
+            class="object-center object-cover hover:opacity-75 sm:h-40 sm:w-40 lg:h-full lg:w-full">
         </a>
       </div>
       <div v-if="item.texte.length > 0">
