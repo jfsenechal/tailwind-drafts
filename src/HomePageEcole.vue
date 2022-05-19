@@ -1,13 +1,12 @@
 <script setup>
 import { ref } from "vue";
+import { BookmarkAltIcon, CalendarIcon, ShieldCheckIcon, SupportIcon } from "@heroicons/vue/outline";
 import TitleEcole from "./components/homepageecole/TitleEcole.vue";
 import News from "./components/homepageecole/News.vue";
 import MenuFly from "./components/homepage/MenuFly.vue";
-import { BookmarkAltIcon, CalendarIcon, ShieldCheckIcon, SupportIcon } from "@heroicons/vue/outline";
 import Footer from "./components/homepage/Footer.vue";
 import Agenda from "./components/homepageecole/Agenda.vue";
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import Widgets from "./components/article/Widgets.vue";
 
 const implantations = [
   { name: "Aye", href: "#" },
@@ -53,13 +52,14 @@ const callback = (isOpen) => openSearch.value = isOpen;
     <MenuFly :implantations="implantations" :informations="informations" />
     <hr>
     <TitleEcole @search-event="callback" :openSearch="openSearch" />
-  <div class="container mx-auto px-4 sm:px-6 lg:px-4">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-4">
       <div class="grid grid-cols-[1fr,auto] gap-1 h-full border-2 border-gray-200 rounded-lg">
         <div class="px-4 py-2 sm:p-6">
           <News />
         </div>
         <div class="px-4 py-2 sm:p-6">
           <Agenda />
+          <Widgets />
         </div>
       </div>
     </div>
