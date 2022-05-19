@@ -2,7 +2,7 @@
 <template>
   <div class="bg-white">
     <div aria-hidden="true" class="relative">
-      <img src="https://tailwindui.com/img/ecommerce-images/product-feature-02-full-width.jpg" alt="" class="w-full h-96 object-center object-cover" />
+      <img src="../../assets/carnaval.jpg" alt="" class="w-full h-96 object-center object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-white" />
     </div>
 
@@ -12,12 +12,7 @@
         <p class="mt-4 text-gray-500">Organize is a system to keep your desk tidy and photo-worthy all day long. Procrastinate your work while you meticulously arrange items into dedicated trays.</p>
       </div>
 
-      <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
-        <div v-for="feature in features" :key="feature.name" class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">{{ feature.name }}</dt>
-          <dd class="mt-2 text-sm text-gray-500">{{ feature.description }}</dd>
-        </div>
-      </dl>
+
     </div>
   </div>
 </template>

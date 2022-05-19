@@ -6,6 +6,7 @@ import Footer from "./components/homepage/Footer.vue";
 import Gallery from "./components/article/Gallery.vue";
 import { BookmarkAltIcon, CalendarIcon, ShieldCheckIcon, SupportIcon } from "@heroicons/vue/outline";
 import MenuFly from "./components/homepage/MenuFly.vue";
+import ImageTop from "./components/article/ImageTop.vue";
 
 const implantations = [
   { name: "Aye", href: "#" },
@@ -48,9 +49,7 @@ const informations = [
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
     <div class="bg-white overflow-hidden shadow rounded-lg mb-3">
-      <img class="h-40 w-full object-cover lg:h-56 mb-3"
-           src="./assets/carnaval.jpg"
-           alt="">
+      <ImageTop/>
       <Breadcrumb />
       <div class="px-4 py-5 sm:p-6">
         <Title />
