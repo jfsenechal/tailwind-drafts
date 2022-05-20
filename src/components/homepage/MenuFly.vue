@@ -11,7 +11,7 @@
           </a>
         </div>
 
-        <div class="md:hidden flex-grow-0 flex items-center justify-center">
+        <div class="md:hidden ml-4 sm:ml-1 flex-grow-0 flex items-center justify-center">
           <div class="max-w-lg w-full lg:max-w-xs">
             <label for="search" class="sr-only">Rechercher</label>
             <div class="relative">
