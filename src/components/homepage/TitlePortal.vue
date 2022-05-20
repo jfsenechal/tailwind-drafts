@@ -7,7 +7,7 @@
         </h2>
         <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
           <p class="text-xl text-gray-500">Sur la commune de Marche-en-Famenne.</p>
-          <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
+          <form class="hidden mt-6 md:flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
             <div>
               <label for="email-address" class="sr-only">Rechercher</label>
               <input id="email-address" name="email-address" type="search" autocomplete="off" required="" @click="emit('search-event', true)"
