@@ -29,7 +29,5 @@
 </template>
 
 <script setup>
-defineProps(["openSearch"]);
 const emit = defineEmits(['search-event'])
-
 </script>

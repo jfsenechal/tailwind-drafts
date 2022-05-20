@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const { resolve } = require("path");
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
@@ -11,8 +11,9 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         homepage: resolve(__dirname, "homepage.html"),
         article: resolve(__dirname, "article.html"),
-        homepageecole: resolve(__dirname, "homepageecole.html"),
+        homepageecole: resolve(__dirname, "homepageecole.html")
       }
     }
-  }
+  },
+  base: "https://ecolescommunales.marche.be/nouveau/",
 });

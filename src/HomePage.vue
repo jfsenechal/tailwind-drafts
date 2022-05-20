@@ -52,7 +52,7 @@ const callback = (isOpen) => openSearch.value = isOpen;
   <div class="bg-gradient-to-br from-rose-100 via-violet-100 to-emerald-300">
     <MenuFly :implantations="implantations" :informations="informations" />
     <hr>
-    <TitlePortal @search-event="callback" :openSearch="openSearch" />
+    <TitlePortal @search-event="callback" />
     <Palette @search-event="callback" :openSearch="openSearch" />
     <News />
     <Footer />

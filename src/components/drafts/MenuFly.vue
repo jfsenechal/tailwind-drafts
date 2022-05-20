@@ -1,8 +1,8 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Popover class="zezev relative bg-white shadow-xl">
+  <Popover class="relative bg-white shadow-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center border-b-2 border-gray-100 my-2 md:my-6 md:justify-start md:space-x-10">
+      <div class="flex justify-between items-stretch border-b-2 border-gray-100 my-6 md:justify-start md:space-x-10">
         <div class="flex justify-start self-center">
           <a href="#">
             <span class="sr-only">Ecoles</span>
@@ -10,25 +10,12 @@
                  alt="" />
           </a>
         </div>
-
-        <div class="md:hidden flex-grow-0 flex items-center justify-center">
-          <div class="max-w-lg w-full lg:max-w-xs">
-            <label for="search" class="sr-only">Rechercher</label>
-            <div class="relative">
-              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <SearchIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
-              </div>
-              <input id="search"
-                     @click="emit('search-event', true)"
-                     autocomplete="off"
-                     name="search"
-                     class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                     placeholder="Rechercher"
-                     type="search" />
-            </div>
-          </div>
+        <div class="md:hidden flex justify-between space-x-10">
+          <a v-for="item in implantations" :key="item.name" :href="item.href"
+             class="border-transparent hover:border-orange border-b-2 text-base font-medium text-gray-500 hover:text-gray-900">
+            {{ item.name }}
+          </a>
         </div>
-
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
             class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -100,8 +87,9 @@
             </div>
             <div class="mt-6">
               <nav class="grid gap-y-8">
-                <a v-for="item in implantations" :key="item.name" :href="item.href"
+                <a v-for="item in informations" :key="item.name" :href="item.href"
                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                  <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                   <span class="ml-3 text-base font-medium text-gray-900">
                     {{ item.name }}
                   </span>
@@ -109,6 +97,14 @@
               </nav>
             </div>
           </div>
+<!--          <div class="py-6 px-5 space-y-6">
+            <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+              <a v-for="item in implantations" :key="item.name" :href="item.href"
+                 class="text-base font-medium text-gray-900 hover:text-gray-700">
+                {{ item.name }}
+              </a>
+            </div>
+          </div>-->
         </div>
       </PopoverPanel>
     </transition>
@@ -118,12 +114,19 @@
 <script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/vue";
 import {
-  SearchIcon,
+  BookmarkAltIcon,
+  CalendarIcon,
+  ChartBarIcon,
+  CursorClickIcon,
   MenuIcon,
+  PhoneIcon,
+  PlayIcon,
+  RefreshIcon,
+  ShieldCheckIcon,
+  SupportIcon,
+  ViewGridIcon,
   XIcon
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
-
-const emit = defineEmits();
-defineProps(["implantations", "informations", "openSearch"]);
+defineProps(["implantations","informations"]);
 </script>
